@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="css/stylesLoginRegister.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+
+            <!-- Registration Form -->
+            <form class="form" id="register-form" method="POST" th:action="@{/register}">
+                <h2>Регистрация</h2>
+                <div class="input-group">
+                    <label for="username">Имя пользователя</label>
+                    <input type="username" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-confirm-password">Повторите пароль</label>
+                    <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+                </div>
+                <div class="input-group">
+                    <label for="firstName">Имя</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Фамилия</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="input-group">
+                    <label for="surName">Отчество</label>
+                    <input type="text" id="surName" name="surName" required>
+                </div>
+                <div class="input-group">
+                    <label for="universityName">Название университета</label>
+                    <input type="text" id="universityName" name="universityName" required>
+                </div>
+                <div class="input-group">
+                    <label for="groupCode">Номер группы</label>
+                    <input type="text" id="groupCode" name="groupCode" required>
+                </div>
+                
+                <button type="submit" class="btn">Зарегистрироваться</button>
+                <p class="switch-form">Уже есть аккаунт? <a href="/login" id="show-login">Вход</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

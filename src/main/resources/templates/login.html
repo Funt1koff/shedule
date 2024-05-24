@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="css/stylesLoginRegister.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <form class="form" id="login-form" method="POST" th:action="@{/login}">
+                <h2>Вход</h2>
+                <div class="input-group">
+                    <label for="username">Имя пользователя</label>
+                    <input type="username" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Войти</button>
+                <p class="switch-form">Нет аккаунта? <a href="/register" id="show-register">Регистрация</a></p>
+            </form>
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

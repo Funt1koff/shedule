@@ -1,0 +1,8 @@
+server:
+    port: 1776
+spring:
+    application:
+      name: schedule
+    jpa:
+      hibernate:
+        ddl-auto: create

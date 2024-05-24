@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+    <div class="site_header">
+        <div class = "logo">
+            <img class="logo_picture" src="img/main_logo.png"/>
+        </div>
+        <div class="site_name">
+        <h1>Скедул</h1>
+        </div>
+            <ul>
+               <li><a href="/schedule1">Расписание</a></li>
+               <li><a href="/settings">Настройки</a></li>
+               <li><a href="/help">Помощь</a></li>
+               <li><a href="/logout">Выход</a></li>
+            </ul> 
+    </div>
+    <div class="main_container">
+    <div class = "profile_container">
+        <div class="profile_header"> 
+            <h1>Профиль</h1>
+        </div>
+        <div class = "profile_info">
+            <b>Фамиля:</b><p th:text="*{user.lastName}">фамилия</p>
+            <b>Имя:</b><p th:text="*{user.firstName}">имя</p>
+            <b>Отчество:</b><p th:text="*{user.surName}">отчество</p>
+            <b>Университет:</b><p th:text="*{user.universityName}">университет</p>
+            <b>Группа:</b><p th:text="*{user.groupCode}">группа</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1 th:text="*{user.groupCode}">groupCode</h1>
+            <div class="date-nav">
+                <div class="day">Пн</div>
+                <div class="day">Вт</div>
+                <div class="day">Ср</div>
+                <div class="day">Чт</div>
+                <div class="day">Пт</div>
+                <div class="day">Сб</div>
+                <div class="day">Вс</div>
+            </div>
+            <div class="dates">
+                <div class="date"><a href="/schedule1" th:text="*{day0.dayNumber}">1</a></div>
+                <div class="date"><a href="/schedule2" th:text="*{day1.dayNumber}">2</a></div>
+                <div class="date"><a href="/schedule3" th:text="*{day2.dayNumber}">3</a></div>
+                <div class="date"><a href="/schedule4" th:text="*{day3.dayNumber}">4</a></div>
+                <div class="date active"><a href="/schedule5" th:text="*{day4.dayNumber}">5</a></div>
+                <div class="date"><a href="/schedule6" th:text="*{day5.dayNumber}">6</a></div>
+                <div class="date"><a href="/schedule7" th:text="*{day6.dayNumber}">7</a></div>
+            </div>
+            <div class="current-date"><p th:text="*{day4.currentDateBuilder}">Дата</p></div>
+        </div>
+        <div class="schedule">
+            <div class="schedule-item">
+                <div class="item-number"><p>1</p></div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <span class="item-title">Лекция</span>
+                        <span class="item-time">8:00 - 09:35</span>
+                    </div>
+                    <div class="item-description">
+                        <b>Системное программирование и архитектура ЭВМ</b><br>
+                        Ивлиев Н.А.<br>
+                        Online<br>
+                        6202-010302D
+                        6201-010302D
+                        6203-010302D
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-item">
+                <div class="item-number"><p>2</p></div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <span class="item-title">Лекция</span>
+                        <span class="item-time">09:45 - 11:20</span>
+                    </div>
+                    <div class="item-description">
+                        <b>Физика</b><br>
+                        Кренц А.А.<br>
+                        Online<br>
+                        6201-010302D
+                        6202-010302D
+                        6203-010302D
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-item">
+                <div class="item-number"><p>3</p></div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <span class="item-title">Лекция</span>
+                        <span class="item-time">11:20 - 13:05</span>
+                    </div>
+                    <div class="item-description">
+                        <b>Введение в специальность</b><br>
+                        Суханов С.В.<br>
+                        Online<br>
+                        6201-010302D
+                        6202-010302D
+                        6203-010302D
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-item">
+                <div class="item-number"><p>4</p></div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <span class="item-title">Лекция</span>
+                        <span class="item-time">13:30 - 15:05</span>
+                    </div>
+                    <div class="item-description">
+                        <b>Операционные системы</b><br>
+                        Савельев Д.А.<br>
+                        Online<br>
+                        6201-010302D
+                        6202-010302D
+                        6203-010302D
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-item"><i class="fa fa-bookmark"></i></div>
+            <div class="nav-item active"><i class="fa fa-calendar"></i></div>
+            <div class="nav-item"><i class="fa fa-search"></i></div>
+            <div class="nav-item"><i class="fa fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="homework_container" style="
+    margin-top: -805px;
+">
+        <div class = "homework_header">
+            <h1>Домашние задания</h1>
+        </div>
+        <div class="homework">
+            <b><p class="discipline_name">Введение в специальность</p></b>
+            <p>29.05.24</p>
+            <p>Реферат на тему ООП в Java и C#</p>
+        </div>
+        <div class="homework">
+            <b><p class="discipline_name">Операционные системы</p></b>
+            <p>21.05.24 (ПРОСРОЧЕНО)</p>
+            <p>Программа на Java для работы в sudo в Astra Linux</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
