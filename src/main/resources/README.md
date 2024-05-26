@@ -1,17 +1,9 @@
-# Schedule Template
+# Schedule Web Application
 
-A simple template that lets you display events on a timeline, as well as organize them in groups (week days, conference rooms etc…).
+## Application for viewing the schedule and planning students' classes
 
-[Article on CodyHouse](https://codyhouse.co/gem/schedule-template)
+![logo](https://previews.123rf.com/images/bandit2523/bandit25231412/bandit2523141200003/34430861-word-schedule-in-white-background.jpg)
 
-[Demo](https://codyhouse.co/demo/schedule-template)
- 
-[License](https://codyhouse.co/license)
+### Customer: Maxim K.
 
-## Dependencies
-
-This experiment is built upon the [CodyHouse Framework](https://github.com/CodyHouse/codyhouse-framework).
-
-Make sure to include both the style.scss and util.js files of the framework.
-
-6203-010302D!
+### Developer: Sergey F.
